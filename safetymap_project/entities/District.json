@@ -1,0 +1,27 @@
+{
+  "name": "District",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the district/neighborhood"
+    },
+    "city_name": {
+      "type": "string",
+      "description": "The city this district belongs to"
+    },
+    "geometry": {
+      "type": "object",
+      "description": "GeoJSON geometry object for the district's polygon"
+    },
+    "average_safety_score": {
+      "type": "number",
+      "description": "Average safety score for this district (0-100)"
+    }
+  },
+  "required": [
+    "name",
+    "city_name",
+    "geometry"
+  ]
+}
