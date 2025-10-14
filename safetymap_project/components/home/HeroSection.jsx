@@ -48,4 +48,54 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6"
           >
             <Shield className="w-4 h-4" />
- 
+            <span>Trusted by 100,000+ travelers</span>
+          </motion.div>
+
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            Feel Safe
+            <br />
+            <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
+              Anywhere
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            Explore interactive safety maps of European cities. Make informed decisions about where to live, walk, or invest.
+          </p>
+        </motion.div>
+
+        {/* Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+        >
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-lg shadow-gray-200/50">
+            <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
+              <MapPin className="w-6 h-6 text-emerald-600" />
+            </div>
+            <div className="text-3xl font-bold text-gray-900 mb-1">50+</div>
+            <div className="text-sm text-gray-600">European Cities</div>
+          </div>
+
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-lg shadow-gray-200/50">
+            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+              <Users className="w-6 h-6 text-blue-600" />
+            </div>
+            <div className="text-3xl font-bold text-gray-900 mb-1">100K+</div>
+            <div className="text-sm text-gray-600">Community Reports</div>
+          </div>
+
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-lg shadow-gray-200/50">
+            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+              <TrendingDown className="w-6 h-6 text-purple-600" />
+            </div>
+            <div className="text-3xl font-bold text-gray-900 mb-1">Real-time</div>
+            <div className="text-sm text-gray-600">Safety Updates</div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
