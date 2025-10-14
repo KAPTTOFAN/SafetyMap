@@ -48,4 +48,15 @@ export default function SafetyFilters({ filters, setFilters }) {
                 <SelectItem value="park">Park</SelectItem>
                 <SelectItem value="metro">Metro/Transit</SelectItem>
                 <SelectItem value="bar">Bars/Nightlife</SelectItem>
- 
+                <SelectItem value="restaurant">Restaurant</SelectItem>
+                <SelectItem value="residential">Residential</SelectItem>
+                <SelectItem value="commercial">Commercial</SelectItem>
+                <SelectItem value="tourist">Tourist Areas</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
