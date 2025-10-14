@@ -37,4 +37,32 @@
       "enum": [
         "street",
         "park",
- 
+        "metro",
+        "bar",
+        "restaurant",
+        "residential",
+        "commercial",
+        "tourist"
+      ],
+      "description": "Type of location"
+    },
+    "user_review": {
+      "type": "string",
+      "description": "User's safety experience description"
+    },
+    "reported_issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of safety concerns"
+    }
+  },
+  "required": [
+    "city_name",
+    "district",
+    "latitude",
+    "longitude",
+    "safety_score"
+  ]
+}
