@@ -1,0 +1,40 @@
+{
+  "name": "SafetyReport",
+  "type": "object",
+  "properties": {
+    "city_name": {
+      "type": "string",
+      "description": "City name"
+    },
+    "district": {
+      "type": "string",
+      "description": "District or neighborhood name"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Location latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Location longitude"
+    },
+    "safety_score": {
+      "type": "number",
+      "description": "Safety score 0-100"
+    },
+    "time_of_day": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "description": "Time of day for this report"
+    },
+    "location_type": {
+      "type": "string",
+      "enum": [
+        "street",
+        "park",
+ 
