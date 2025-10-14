@@ -48,4 +48,107 @@ export default function ReportForm({ cityName, onSubmit, onCancel }) {
               <Input
                 id="district"
                 value={formData.district}
- 
+                onChange={(e) => setFormData({ ...formData, district: e.target.value })}
+                placeholder="e.g. City Center"
+                required
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="latitude">Latitude</Label>
+                <Input
+                  id="latitude"
+                  type="number"
+                  step="0.000001"
+                  value={formData.latitude}
+                  onChange={(e) => setFormData({ ...formData, latitude: parseFloat(e.target.value) })}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="longitude">Longitude</Label>
+                <Input
+                  id="longitude"
+                  type="number"
+                  step="0.000001"
+                  value={formData.longitude}
+                  onChange={(e) => setFormData({ ...formData, longitude: parseFloat(e.target.value) })}
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <Label htmlFor="safety_score">Safety Score (0-100)</Label>
+              <Input
+                id="safety_score"
+                type="number"
+                min="0"
+                max="100"
+                value={formData.safety_score}
+                onChange={(e) => setFormData({ ...formData, safety_score: parseInt(e.target.value) })}
+                required
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="time_of_day">Time of Day</Label>
+              <Select
+                value={formData.time_of_day}
+                onValueChange={(value) => setFormData({ ...formData, time_of_day: value })}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="morning">Morning</SelectItem>
+                  <SelectItem value="afternoon">Afternoon</SelectItem>
+                  <SelectItem value="evening">Evening</SelectItem>
+                  <SelectItem value="night">Night</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="location_type">Location Type</Label>
+              <Select
+                value={formData.location_type}
+                onValueChange={(value) => setFormData({ ...formData, location_type: value })}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="street">Street</SelectItem>
+                  <SelectItem value="park">Park</SelectItem>
+                  <SelectItem value="metro">Metro/Transit</SelectItem>
+                  <SelectItem value="bar">Bars/Nightlife</SelectItem>
+                  <SelectItem value="restaurant">Restaurant</SelectItem>
+                  <SelectItem value="residential">Residential</SelectItem>
+                  <SelectItem value="commercial">Commercial</SelectItem>
+                  <SelectItem value="tourist">Tourist Areas</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="review">Your Experience</Label>
+              <Textarea
+                id="review"
+                value={formData.user_review}
+                onChange={(e) => setFormData({ ...formData, user_review: e.target.value })}
+                placeholder="Share your safety experience in this area..."
+                rows={4}
+              />
+            </div>
+
+            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+              Submit Report
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
