@@ -1,0 +1,40 @@
+{
+  "name": "City",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "City name"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country name"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "City center latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "City center longitude"
+    },
+    "overall_safety_score": {
+      "type": "number",
+      "description": "Overall safety score 0-100"
+    },
+    "population": {
+      "type": "number",
+      "description": "City population"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief city description"
+    }
+  },
+  "required": [
+    "name",
+    "country",
+    "latitude",
+    "longitude"
+  ]
+}
